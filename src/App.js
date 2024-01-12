@@ -8,6 +8,9 @@ import ConfirmOrder from "./components/Cart/ConfirmOrder";
 import PaymentSuccess from "./components/Cart/PaymentSuccess";
 import Login from "./components/Login/Login";
 import Me from "./components/Profile/Me";
+import MyOrders from "./components/myorders/MyOrders";
+import OrderDetails from "./components/myorders/OrderDetails";
+
 
 import "./styles/app.scss";
 import "./styles/header.scss";
@@ -22,6 +25,9 @@ import "./styles/ConfirmOrder.scss";
 import "./styles/PaymentSuccess.scss";
 import "./styles/Login.scss";
 import "./styles/Me.scss";
+import "./styles/table.scss";
+import "./styles/OrderDetails.scss"
+
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 function App() {
@@ -39,8 +45,8 @@ function App() {
         <Route path="/PaymentSuccess" element={<PaymentSuccess/>}/>
         <Route path="/Login" element={<Login/>}/>
         <Route path="/Me" element={<Me/>}/>
-
-
+        <Route path="/myorders" element={<MyOrders/>}/>
+        <Route path="/order/:id" element={<OrderDetails/>}/>
       </Routes>
       <Footer/>
     </Router>
